@@ -1,4 +1,4 @@
-# GictSytsem PreInterview Assessment 
+# GictSystem PreInterview Assessment 
 
 This project was bootstrapped with 
 1. [Create React App](https://github.com/facebook/create-react-app).
