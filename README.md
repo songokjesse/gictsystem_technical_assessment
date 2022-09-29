@@ -6,6 +6,11 @@ This project was bootstrapped with
 3. [Bootstrap 5](https://getbootstrap.com/) & [Bootstrap-React](https://react-bootstrap.github.io/)
 4. [React-hook-forms](https://react-hook-form.com/)
 
+## Before Launch
+1. Rename the example.env to .env
+2. Add the necessary URLS for both post and get requests
+3. Add the Bearer token for the GET Request
+
 ## Available Scripts
 
 In the project directory, you can run:

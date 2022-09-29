@@ -1,15 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
+import axios from 'axios';
 
 import { useForm } from 'react-hook-form';
 
 const Form = () => {
-    const { register,handleSubmit, formState: { errors } } = useForm();
+    let baseUrl = process.env.REACT_APP_POST_BASEURL
+
+    const [successfull, setSuccesfull] = useState('false')
+    const { register,handleSubmit, formState: { errors }, reset } = useForm();
 
     const onSubmit = (data) => {
     console.log(data);
+    axios.post(baseUrl, {
+      body: JSON.stringify({
+            'fullname': data.fullname,
+            'email': data.email,
+            'phone': data.phone,
+            'address': data.address
+        })
+    }).then(response => console.log(response ));
+        setSuccesfull('true')
   };
 
+
+ 
+
     return (
+        <>
+        {successfull === 'true'?<p className='mb-2 alert alert-success'> Address Form Submited Successfully</p>:''}
+    
         <form  onSubmit={handleSubmit(onSubmit)}>
            
                 <div className="mb-3">
@@ -74,10 +93,13 @@ const Form = () => {
                 </div>
             
                 <div className="">
-                    <button type="submit" className="btn btn-primary">Save</button>
+                    <button type="submit" className="btn btn-primary">Save</button> &nbsp;
+                     <button type="button" onClick={() => reset()} className="btn btn-secondary">Reset</button>
+
                 </div>
     
         </form>
+        </>
     )
 }
 export default Form;
