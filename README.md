@@ -2,9 +2,9 @@
 
 This project was bootstrapped with 
 1. [Create React App](https://github.com/facebook/create-react-app).
-2. Axios
-3. Bootstrap & Bootstrap-React
-4. React-hook-forms
+2. [Axios](https://axios-http.com/docs/intro)
+3. [Bootstrap 5](https://getbootstrap.com/) & [Bootstrap-React](https://react-bootstrap.github.io/)
+4. [React-hook-forms](https://react-hook-form.com/)
 
 ## Available Scripts
 
